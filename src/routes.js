@@ -1,8 +1,8 @@
 const { Router } = require("express");
 const UserController = require("./controllers/userController");
 const HabitController = require("./controllers/habitController");
-const WeightController = require("./controllers/WeightController");
-const CheckPointController = require("./controllers/CheckPointController");
+const weightController = require("./controllers/weightController");
+const checkPointController = require("./controllers/checkPointController");
 
 const routes = Router();
 
@@ -14,8 +14,8 @@ routes.delete("/user/:userId", UserController.delete);
 routes.post("/habit", HabitController.store);
 routes.delete("/habit/:habitId", HabitController.delete);
 
-routes.post("/weight", WeightController.store);
+routes.post("/weight", weightController.store);
 
-routes.get("/checkPoint", CheckPointController.store);
+routes.get("/checkPoint", checkPointController.store);
 // ?userId=2&habitId=3
 module.exports = routes;
